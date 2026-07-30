@@ -1,0 +1,388 @@
+body{
+
+margin:0;
+
+font-family:Arial, Helvetica, sans-serif;
+
+background:#1e1e1e;
+
+color:white;
+
+}
+
+
+header{
+
+text-align:center;
+
+padding:40px;
+
+background:#202f45;
+
+}
+
+
+header h1{
+
+margin-bottom:10px;
+
+}
+
+
+#progression{
+
+width:80%;
+
+margin:30px auto;
+
+}
+
+
+#progressContainer{
+
+width:100%;
+
+height:25px;
+
+background:#555;
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+
+#progressBar{
+
+height:100%;
+
+width:0%;
+
+background:gold;
+
+transition:0.5s;
+
+}
+
+
+#menu{
+
+display:flex;
+
+justify-content:center;
+
+gap:30px;
+
+margin-top:40px;
+
+flex-wrap:wrap;
+
+}
+
+
+.quete{
+
+width:260px;
+
+padding:20px;
+
+border-radius:15px;
+
+text-align:center;
+
+box-shadow:0px 0px 12px rgba(0,0,0,.4);
+
+}
+
+
+.disponible{
+
+background:#32663d;
+
+}
+
+
+.verrouillee{
+
+background:#444;
+
+opacity:.6;
+
+}
+
+
+button{
+
+padding:12px 30px;
+
+font-size:18px;
+
+border:none;
+
+border-radius:10px;
+
+cursor:pointer;
+
+}
+
+
+button:disabled{
+
+cursor:not-allowed;
+
+}
+
+
+#jeu{
+
+width:80%;
+
+margin:50px auto;
+
+padding:30px;
+
+background:#303030;
+
+border-radius:15px;
+
+min-height:250px;
+
+}.informations-progression {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+#score {
+    font-weight: bold;
+}
+
+.conteneur-question {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.numero-question {
+    color: #d6d6d6;
+    font-size: 16px;
+}
+
+.texte-question {
+    margin: 30px 0;
+    font-size: 28px;
+    line-height: 1.4;
+}
+
+.zone-reponses {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.bouton-reponse {
+    min-width: 180px;
+    background: #ececec;
+    color: #202020;
+    font-weight: bold;
+    transition:
+        transform 0.2s,
+        background-color 0.2s;
+}
+
+.bouton-reponse:hover:not(:disabled) {
+    transform: scale(1.04);
+}
+
+.bouton-reponse:disabled {
+    opacity: 1;
+}
+
+.bonne-reponse {
+    background: #2e9d50;
+    color: white;
+}
+
+.mauvaise-reponse {
+    background: #b83d3d;
+    color: white;
+}
+
+.message-reponse {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    min-height: 25px;
+}
+
+.message-correct {
+    background: rgba(46, 157, 80, 0.2);
+    border: 2px solid #2e9d50;
+}
+
+.message-incorrect {
+    background: rgba(184, 61, 61, 0.2);
+    border: 2px solid #b83d3d;
+}
+
+.bouton-continuer,
+.bouton-retour {
+    display: block;
+    margin: 25px auto 0;
+    background: #e2b714;
+    color: #202020;
+    font-weight: bold;
+}
+
+.fin-quete,
+.ecran-accueil,
+.ecran-construction {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.icone-reussite {
+    font-size: 70px;
+}
+
+.points-gagnes {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f0c82e;
+}
+
+@media (max-width: 650px) {
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    #progression,
+    #jeu {
+        width: auto;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .informations-progression {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .texte-question {
+        font-size: 23px;
+    }
+
+    .bouton-reponse {
+        width: 100%;
+    }
+}
+.pied-page {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.bouton-reset {
+    padding: 7px 12px;
+    border: 1px solid #777;
+    border-radius: 6px;
+
+    background: transparent;
+    color: #aaa;
+
+    font-size: 12px;
+    opacity: 0.55;
+
+    cursor: pointer;
+
+    transition:
+        opacity 0.2s,
+        color 0.2s,
+        border-color 0.2s;
+}
+
+.bouton-reset:hover,
+.bouton-reset:focus {
+    color: white;
+    border-color: white;
+    opacity: 1;
+}
+
+.bouton-reset:active {
+    transform: scale(0.97);
+}
+
+.ecran-quete-terminee {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.terminee {
+    background: #24556b;
+    border: 2px solid #55b9df;
+}
+
+.terminee button {
+    background: #d6edf5;
+    color: #183d4c;
+}
+
+/* ==========================
+   Quête vidéo
+========================== */
+
+.ecran-video {
+    width: min(900px, 100%);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.numero-quete {
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    opacity: 0.75;
+}
+
+.description-video {
+    max-width: 700px;
+    margin: 0 auto 24px;
+    line-height: 1.6;
+}
+
+.video-quete {
+    display: block;
+
+    width: 100%;
+    max-width: 800px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 12px;
+
+    background: black;
+}
+
+.message-video {
+    min-height: 24px;
+    margin: 16px 0;
+}
+
+.bouton-continuer:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
